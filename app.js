@@ -5,7 +5,6 @@ const mysql = require('mysql');
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
 const port=process.env.PORT || 1900;
-const querystring = require('query-string');
 
 const sql = mysql.createConnection({
   host : '127.0.0.1',
