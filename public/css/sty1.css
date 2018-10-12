@@ -162,3 +162,14 @@ input:-webkit-autofill:active {
 #hide {
   display : none;
 }
+select {
+  margin-left: 75px;
+  float: left;
+  margin-bottom: 52px;
+  padding:7px;
+  font-size: 17px;
+  width : 300px;
+  border: 1px solid grey;
+  background-color: #e4e4e4;
+  border-radius: 3px;
+  }

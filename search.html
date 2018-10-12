@@ -9,9 +9,9 @@
   <script type="text/javascript" src="js/next.js"></script>
 </head>
 <div class = 'navbar'>
-  <a href = ''><img src = "image/logo.png" /></a>
+  <a href = '/'><img src = "image/logo.png" /></a>
   <ul class = 'barier'>
-    <ls><a class = 'ls' href = ''>Home</a></ls>
+    <ls><a class = 'ls' href = '/'>Home</a></ls>
     <is><a class = 'ls' href = 'search'>Search</a></is>
     <is><a class = 'ls' href = 'about'>About</a></is>
     <ls><a class = 'ls' href = 'register'>Register</a></ls>
@@ -20,9 +20,20 @@
 <div class= "regform" style = 'height: 350px;'>
 <form action = '/search' method = 'post' >
   <br />
-  <div class = 'label' >Name:<input style = "margin-bottom: 0px; float: right; margin-left : 7px" type = 'radio' name = 'column' value = 'Name' /></div>
-  <div class = 'label' >Email:<input style = "margin-bottom: 0px; float: right; margin-left : 11px" type = 'radio' name = 'column' value = 'Email' /></div>
-  <div class = 'label' >Contact:<input style = "margin-bottom: 0px; float: right; margin-left : -8px" type = 'radio' name = 'column' value = 'Contact' /></div>
+  <select name = 'column'>
+    <option>
+      ---------------
+    </option>
+    <option>
+      Name
+    </option>
+    <option>
+      Email
+    </option>
+    <option>
+      Contact
+    </option>
+  </select>
   <input type = 'text' style = "float: left; margin-left : 75px" name = 'element' /><br />
   <button class = 'button2' type = 'submit' >Search</button>
   </form>
