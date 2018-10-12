@@ -7,10 +7,10 @@ const ejs = require('ejs');
 const port=process.env.PORT || 1900;
 
 const sql = mysql.createConnection({
-  host : '127.0.0.1',
-  user : 'chirag',
+  host : 'localhost',
+  user : 'imchirag2000',
   password : 'chirag@248895',
-  database : 'post',
+  database : 'techdoccell',
   port : '3307'
 });
 // sql.query('SELECT COUNT(*) AS number FROM employee' , (err , reslt) =>{
@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine' , 'ejs');
 app.set('views' , './views');
-app.get('/home' , (req , res) => {
+app.get('/' , (req , res) => {
   res.sendFile(path.join(__dirname , 'home.html'));
 });
 app.get('/register', (req , res )=>{
@@ -37,14 +37,14 @@ app.get('/remove' , (req , res)=>{
 app.post('/register' , (req ,res) =>{
   console.log(req.body)
   res.end();
-  sql.query('INSERT INTO employee(Name , Email , Contact , Date) VALUE ("'+req.body.rname+'" ,"'+req.body.remail+'" , "'+req.body.rcontact+'" , "'+req.body.rage+'" )' , (err , result) =>{
+  sql.query('INSERT INTO Persons(Name , Email , Contact , Date) VALUE ("'+req.body.rname+'" ,"'+req.body.remail+'" , "'+req.body.rcontact+'" , "'+req.body.rage+'" )' , (err , result) =>{
     if(err) throw err ;
     console.log('Succesful')
     res.redirect("/search");
   });
 });
 app.post('/search' , (req , res)=>{
-  sql.query('SELECT * FROM employee WHERE '+req.body.column+' = "'+req.body.element+'" ' , (err , result)=>{
+  sql.query('SELECT * FROM Persons WHERE '+req.body.column+' = "'+req.body.element+'" ' , (err , result)=>{
     const obj = JSON.stringify(result);
     res.render('show', {result});
     console.log(result);
