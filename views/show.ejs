@@ -16,12 +16,29 @@
     </ul>
   </div>
   <div id = 'Show' style = 'text-align : center;'>
-    <% for(var i=0; i<result.length; i++) { %>
-        <h2>Employee No. <%=i%></h2>
-        <h1><%=obj[i].ID%></h1><br />
-        <h1><%=result[i].Name%></h1><br />
-        <h1><%=result[i].Email%></h1><br />
-        <h1><%=result[i].Contact%></h1><br />
+      <table style="width:100%">
+        <tr>
+          <th>Employee ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Contact</th>
+          <th>Date</th>
+        </tr>
+        <% for(var i=0; i<= result.length - 1; i++) { %>
+        <tr>
+          <th>Employee ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Contact</th>
+          <th>Date</th>
+        </tr>
+          <td><%=result[i].ID %></td>
+          <td><%=result[i].Name %></td>
+          <td><%=result[i].Email %></td>
+          <td><%=result[i].Contact %></td>
+          <td><%=result[i].Date %></td>
+        </tr>
+      </table>
     <% } %>
   </div>
 </body>
