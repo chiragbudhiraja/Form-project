@@ -11,7 +11,7 @@ const sql = mysql.createConnection({
   user : 'imchirag2000',
   password : 'chirag@248895',
   database : 'techdoccell',
-  port : '3307'
+  port : '3306'
 });
 // sql.query('SELECT COUNT(*) AS number FROM employee' , (err , reslt) =>{
 //   if(err) throw err;
