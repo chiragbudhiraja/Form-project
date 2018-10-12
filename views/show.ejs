@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Show Details</title>
+  <link rel = 'stylesheet' type = 'text/css' href = 'css/sty1.css' />
+  <script type="text/javascript" src="js/show.js"></script>
+</head>
+<body>
+  <div class = 'navbar'>
+    <img src = "image/logo.png" />
+    <ul class = 'barier'>
+      <ls><a class = 'ls' href = 'home'>Home</a></ls>
+      <is><a class = 'ls' href = 'search'>Search</a></is>
+      <is><a class = 'ls' href = 'about'>About</a></is>
+      <ls><a class = 'ls' href = 'register'>Register</a></ls>
+    </ul>
+  </div>
+  <div id = 'Show' style = 'text-align : center;'>
+    <% for(var i=0; i<result.length; i++) { %>
+        <h2>Employee No. <%=i%></h2>
+        <h1><%=result[i].Name%></h1><br />
+        <h1><%=result[i].Email%></h1><br />
+        <h1><%=result[i].Contact%></h1><br />
+    <% } %>
+  </div>
+</body>
+</html>
