@@ -16,15 +16,14 @@
     </ul>
   </div>
   <div id = 'Show' style = 'text-align : center;'>
-
-        <% for(var i=0; i<= result.length - 1; i++) { %>
-        <table >
+       <table >
           <tr>
             <th>Employee ID</th>
             <th>Name</th>
             <th>Email</th>
             <th>Contact</th>
             <th>Date</th>
+         <% for(var i=0; i<= result.length - 1; i++) { %>
           </tr>
           <td><%=result[i].ID %></td>
           <td><%=result[i].Name %></td>
@@ -32,8 +31,8 @@
           <td><%=result[i].Contact %></td>
           <td><%=result[i].Date %></td>
         </tr>
+        <% } %>
       </table>
-    <% } %>
   </div>
 </body>
 </html>
