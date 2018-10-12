@@ -45,7 +45,6 @@ app.post('/search' , (req , res)=>{
   sql.query('SELECT * FROM Persons WHERE '+req.body.column+' = "'+req.body.element+'" ' , (err , result)=>{
     const obj = JSON.stringify(result);
     res.render('show', {result});
-    console.log(result);
     res.end();
   });
 });
