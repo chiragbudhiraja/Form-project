@@ -7,7 +7,7 @@ const ejs = require('ejs');
 const port=process.env.PORT || 1900;
 
 const sql = mysql.createConnection({
-  host : 'localhost',
+  host : 'db4free.net',
   user : 'imchirag2000',
   password : 'chirag@248895',
   database : 'techdoccell',
@@ -35,8 +35,6 @@ app.get('/remove' , (req , res)=>{
   res.sendFile(path.join(__dirname , 'delete.html'))
 })
 app.post('/register' , (req ,res) =>{
-  console.log(req.body)
-  res.end();
   sql.query('INSERT INTO Persons(Name , Email , Contact , Date) VALUE ("'+req.body.rname+'" ,"'+req.body.remail+'" , "'+req.body.rcontact+'" , "'+req.body.rage+'" )' , (err , result) =>{
     if(err) throw err ;
     console.log('Succesful')
