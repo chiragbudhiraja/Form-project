@@ -14,30 +14,33 @@
     <a href = '/'><img src = "image/logo.png" /></a>
     <ul class = 'barier'>
       <ls><a class = 'ls' href = '/'>Home</a></ls>
-      <is><a class = 'ls' href = 'search'>Search</a></is>
-      <is><a class = 'ls' href = 'about'>About</a></is>
-      <ls><a class = 'ls' href = 'register'>Register</a></ls>
+      <ls><a class = 'ls' href = '/search'>Search</a></ls>
+      <ls><a class = 'ls' href = '/view'>View</a></ls>
+      <ls><a class = 'ls' href = '/register'>Register</a></ls>
     </ul>
   </div>
   <div id = 'Show' style = 'text-align : center;'>
-       <table style = 'width : 60%' >
-        <tr>
-          <th>Employee ID</th>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Contact</th>
-          <th>Date</th>
-          </tr>
-         <% for(var i=0; i<= result.length - 1; i++) { %>
-          <tr>
-          <td><%=result[i].ID %></td>
-          <td><%=result[i].Name %></td>
-          <td><%=result[i].Email %></td>
-          <td><%=result[i].Contact %></td>
-          <td><%=result[i].Date %></td>
-        </tr>
-        <% } %>
-      </table>
+    <center>
+      <table style = 'width : 60%' >
+       <tr>
+         <th>Employee ID</th>
+         <th>Name</th>
+         <th>Email</th>
+         <th>Contact</th>
+         <th>Date</th>
+         </tr>
+        <% for(var i=0; i<= result.length - 1; i++) { %>
+         <tr>
+         <td><%=result[i].ID %></td>
+         <td><%=result[i].Name %></td>
+         <td><%=result[i].Email %></td>
+         <td><%=result[i].Contact %></td>
+         <td><%=result[i].Date %></td>
+       </tr>
+       <% } %>
+     </table>
+    </center>
+
   </div>
 </body>
 </html>
