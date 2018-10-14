@@ -49,4 +49,13 @@ app.post('/search' , (req , res)=>{
     res.end();
   });
 });
-app.listen(port);
+app.get('/view' , (req , res) =>{
+  sql.query('SELECT * FROM Persons' , (err , result) => {
+    console.log(result);
+    res.render('show', {result});
+    res.end();
+  });
+});
+app.listen(port , ()=>{
+  console.log('Server is listening on http://localhost:1900');
+});
