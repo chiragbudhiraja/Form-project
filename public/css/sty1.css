@@ -18,6 +18,7 @@ background-color : #e4e4e4;
   display : none;
 }
 .navbar {
+  float : center;
 margin : 0px;
 background-color: #177794;
 font-family: 'Montserrat', sans-serif;
@@ -29,9 +30,9 @@ padding : 10px;
   overflow: auto;
 font-family: 'Montserrat', sans-serif;
 margin : 65px;
-margin-right: 300px;
+margin-right: 350px;
 margin-bottom: -61px;
-margin-left: 300px;
+margin-left: 350px;
 background-color: white;
 padding : 50px;
 padding-left: 0px;
@@ -101,7 +102,7 @@ input[type = submit]{
   font-family: 'Montserrat', sans-serif;
 }
 input{
-margin-right: 82px;
+margin-right: 55px;
 float: right;
 margin-bottom: 52px;
 padding:7px;

@@ -42,7 +42,7 @@ app.post('/register' , (req ,res) =>{
   });
 });
 app.post('/search' , (req , res)=>{
-  sql.query('SELECT * FROM Persons WHERE '+req.body.column+' = "'+req.body.element+'" ' , (err , result)=>{
+  sql.query('SELECT * FROM Persons WHERE '+req.body.column+' LIKE "'+req.body.element+'%" ' , (err , result)=>{
     console.log(err);
     console.log(result);
     res.render('show', {result});
