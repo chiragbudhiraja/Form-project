@@ -3,7 +3,7 @@
 <head>
   <title>Register | Node.js | Tutorial | Learning</title>
   <link rel="icon" href="image/docico.ico"/>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
@@ -21,15 +21,13 @@
     <ls><a class = 'ls' href = '/register'>Register</a></ls>
   </ul>
 </div>
-<div class= "regform" style = 'height: 350px;'>
+<div class= "regform">
 <form action = '/register' method = 'post' >
-    <div>
-        <div class = 'label' >Name:</div><input type = 'text' name = 'rname' placeholder="Full Name" required/><br />
-        <div class = 'label' >Email:</div><input type = 'text' name = 'remail' placeholder="Email" required/><br />
-        <div class = 'label' >Contact</div><input type = 'text' name = 'rcontact' placeholder="Contact" required/><br />
-        <div class = 'label' >Password:</div><input type = 'date' name = 'rage' placeholder="DD/MM/YY" required/><br />
+        <div id = 'label' >Name:</div><div><input type = 'text' name = 'rname' placeholder="Full Name" required/></div><br />
+        <div id = 'label' >Email:</div><div><input type = 'text' name = 'remail' placeholder="Email" required/></div><br />
+        <div id = 'label' >Contact:</div><div><input type = 'text' name = 'rcontact' placeholder="Contact" required/></div><br />
+        <div id = 'label' >Date of birth:</div><div id = 'input'><input type = 'date' name = 'rage' placeholder="DD/MM/YY" required/></div><br />
         <button class ='button1' style='margin-top: 2px;' type = 'submit'>Submit</button><br />
-    </div>
-  </form>
+</form>
   </div>
 </html>

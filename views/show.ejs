@@ -15,12 +15,12 @@
     <ul class = 'barier'>
       <ls><a class = 'ls' href = '/'>Home</a></ls>
       <ls><a class = 'ls' href = '/search'>Search</a></ls>
-      <ls><a class = 'ls' href = '/view'>Records</a></ls>
+      <ls><a class = 'ls' href = '/view'>View</a></ls>
       <ls><a class = 'ls' href = '/register'>Register</a></ls>
     </ul>
   </div>
   <div id = 'Show' style = 'text-align : center;'>
-      <table style = 'width : 60%' >
+      <table>
        <tr>
          <th>Employee ID</th>
          <th>Name</th>
@@ -29,13 +29,19 @@
          <th>Date</th>
          </tr>
         <% for(var i=0; i<= result.length - 1; i++) { %>
-         <tr>
-         <td><%=result[i].ID %></td>
-         <td><%=result[i].Name %></td>
-         <td><%=result[i].Email %></td>
-         <td><%=result[i].Contact %></td>
-         <td><%=result[i].Date %></td>
-       </tr>
+        <tr>
+          <td><%=result[i].ID %></td>
+          <td><%=result[i].Name %></td>
+          <td><%=result[i].Email %></td>
+          <td><%=result[i].Contact %></td>
+          <td><%=result[i].Date %></td>
+          <form method = 'post' action = 'delete'>
+          <td><input type = 'number' name = 'id' style ='display : none' value = '<%=result[i].ID %>' /><button type = 'submit'>Delete</button></td>
+        </form>
+        <form method = 'post' action = 'edit'>
+        <td><input type = 'number' name = 'id' style ='display : none' value = '<%=result[i].ID %>' /><button type = 'submit'>Edit</button></td>
+      </form>
+        </tr>
        <% } %>
      </table>
   </div>

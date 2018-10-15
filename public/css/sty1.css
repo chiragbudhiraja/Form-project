@@ -26,6 +26,7 @@ text-decoration: none;
 padding : 10px;
 }
 .regform {
+  overflow: auto;
 font-family: 'Montserrat', sans-serif;
 margin : 65px;
 margin-right: 300px;
@@ -43,7 +44,7 @@ border-radius: 5px;
   margin-bottom: 55px;
   font-size: 17px;
 }
-.label {
+#label {
   float:left;
   margin-left:76px;
   margin-top : 10px;
@@ -79,6 +80,15 @@ label {
   background-color: #e4e4e4;
   border-radius: 3px;
 }
+.del {
+  float:right;
+  margin-right : 19px;
+}
+table {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  width : 100%;
+}
 input[type = file]{
 padding: 0px;
 width: 0px;
@@ -86,6 +96,9 @@ font-size: 0px;
 margin-left: 0px;
 text-indent: -9999px;
 display : none;
+}
+input[type = submit]{
+  font-family: 'Montserrat', sans-serif;
 }
 input{
 margin-right: 82px;

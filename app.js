@@ -51,10 +51,27 @@ app.post('/search' , (req , res)=>{
 });
 app.get('/view' , (req , res) =>{
   sql.query('SELECT * FROM Persons' , (err , result) => {
-    console.log(result);
-    res.render('show', {result});
-    res.end();
+      res.render('show', {result});
+      res.end();
   });
+});
+app.post('/edit' , (req , res)=>{
+  sql.query('SELECT * FROM Persons WHERE ID = '+req.body.id+'' , (err , result)=>{
+    res.render('register' , {result});
+  });
+});
+app.post('/update' , (req , res) =>{
+  sql.query('UPDATE Persons SET Name = "'+req.body.rname+'" , Email = "'+req.body.remail+'" , Contact = "'+req.body.rcontact+'"  , Date = "'+req.body.rage+'" WHERE ID = '+req.body.id+'' , (err , result) =>{
+  if(err) throw err ;
+  console.log(result);
+  res.redirect('/view');
+  })
+})
+app.post('/delete' , (req , res ) =>{
+  sql.query('DELETE FROM Persons WHERE ID = '+req.body.id+' ' , (err , rslt) =>{
+    if(err) throw err;
+    res.redirect('/view');
+  })
 });
 app.listen(port , ()=>{
   console.log('Server is listening on http://localhost:1900');
